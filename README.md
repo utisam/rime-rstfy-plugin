@@ -1,4 +1,5 @@
 rime-rstfy-plugin
-=================
+====================
 
-plugin for rime to create reStructuredText
+rime plugin for generating reStructuredText
+
