@@ -1,5 +1,5 @@
 rime-rstfy-plugin
 ====================
 
-rime plugin for generating reStructuredText
+[rime](https://github.com/nya3jp/rime) plugin for generating reStructuredText
 
