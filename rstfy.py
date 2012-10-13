@@ -103,8 +103,12 @@ class Problem(targets.registry.Problem):
   def PreLoad(self, ui):
     super(Problem, self).PreLoad(ui)
     base_problem = self.exports['problem']
-    def _problem(assignees, **kwargs):
-      self.assignees = assignees
+    def _problem(assignees=None, **kwargs):
+      if assignees:
+        self.assignees = assignees
+      else:
+        ui.console.PrintWarning('assignees was not set in %s PROBLEM' % kwargs['title'])
+        self.assignees = ""
       return base_problem(**kwargs)
     self.exports['problem'] = _problem
 
